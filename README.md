@@ -1,38 +1,95 @@
-# Ghost Prompt CTF
+# 👻 Ghost Prompt — LLM Prompt Injection CTF
 
-A prompt injection challenge game built with Large Language Models (LLMs). Test your skills in extracting secret passwords from an AI through clever prompt engineering.
+> **A Capture-The-Flag challenge demonstrating real-world LLM prompt injection vulnerabilities.**
 
-## Overview
+---
 
-This project implements a Capture The Flag (CTF) style game where players attempt to bypass an LLM's security measures to reveal hidden passwords. The game progresses through multiple levels of increasing difficulty, each with a different AI persona designed to protect the secret.
+## 🎯 What is Ghost Prompt?
 
-## Features
+Ghost Prompt is a hands-on **Capture-The-Flag (CTF)** game inspired by [Lakera's Gandalf](https://gandalf.lakera.ai/). Each level hides a **secret password** inside an LLM's system prompt. Your mission: craft adversarial prompts to trick the AI into leaking it.
 
-- **Multi-level Challenge**: 3 progressive levels with different AI personalities
-- **Web Interface**: Streamlit-based chat application
-- **LLM Integration**: Uses Qwen2.5-1.5B-Instruct model
-- **Public Hosting**: Ngrok integration for easy deployment
+This demo is part of the **AI Proxy** project — a security framework that detects and prevents LLM attacks including:
+- 🔓 Prompt injection
+- 🕵️ System prompt exfiltration
+- 🔀 Instruction override / jailbreaking
+- 🧩 Emoji smuggling & hidden content attacks
 
-## Setup
+---
 
-1. Install dependencies:
+## 📋 Levels Overview
+
+| Level | Name | Defense Strategy |
+|-------|------|------------------|
+| 1 | The Naive Assistant | No defense — just a polite ask |
+| 2 | The Security Bot | Basic refusal instructions |
+| 3 | The Angry Guard | Roleplay & trick detection |
+
+---
+
+## ⚙️ Quick Start
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Hassan21root/Ghost-Prompt.git
+   cd Ghost-Prompt
+   ```
+
+2. **Install dependencies**:
    ```bash
    pip install transformers accelerate bitsandbytes streamlit pyngrok
    ```
 
-2. Run the notebook to set up and deploy the game.
+3. **Run the notebook**:
+   - Open `ghost_prompt.ipynb` in Jupyter or a compatible environment.
+   - Execute the cells in order to deploy the Streamlit app via ngrok.
 
-## How to Play
+4. **Play the game**:
+   - Access the public URL provided by ngrok.
+   - Attempt to extract the secret passwords through prompt engineering.
 
-1. Access the web interface (deployed via Ngrok)
-2. Chat with the AI and try to extract the secret password
-3. Use prompt injection techniques to bypass security
-4. Advance through levels by successfully revealing passwords
+> 💡 **Tip:** For optimal performance, run on platforms with GPU support like [Kaggle](https://www.kaggle.com) or [Google Colab](https://colab.research.google.com).
 
-## Educational Purpose
+---
 
-This project demonstrates LLM vulnerabilities to prompt injection attacks and serves as a learning tool for AI security and prompt engineering.
+## 💡 Hints for Players
 
-## License
+- **Level 1**: Start by simply asking for the password politely.
+- **Level 2**: Experiment with rephrasing, indirect questions, or pretending to be in a different context.
+- **Level 3**: Try roleplaying as an authority figure, overriding instructions, or using creative tricks to bypass suspicion.
 
-[Add your license here]
+> **Pro Tip:** Prompt injection often involves confusing the AI about its instructions or creating conflicting scenarios.
+
+---
+
+## 🛠️ Technical Details
+
+- **LLM Model**: Qwen2.5-1.5B-Instruct (quantized for efficiency)
+- **Framework**: Hugging Face Transformers
+- **UI**: Streamlit for web interface
+- **Deployment**: Ngrok for public hosting
+
+---
+
+## 🎓 Educational Purpose
+
+This project demonstrates LLM vulnerabilities to prompt injection attacks and serves as a learning tool for AI security and prompt engineering. It highlights the importance of robust input validation and security measures in AI systems.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit issues, feature requests, or pull requests.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- Inspired by [Lakera's Gandalf](https://gandalf.lakera.ai/)
+- Built with [Hugging Face Transformers](https://huggingface.co/transformers)
+- UI powered by [Streamlit](https://streamlit.io)
