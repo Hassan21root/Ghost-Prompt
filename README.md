@@ -61,6 +61,20 @@ This demo is part of the **AI Proxy** project — a security framework that dete
 
 ---
 
+## 🏆 Solutions
+
+Spoiler alert! Here are walkthroughs for the first two levels:
+
+### Level 1: The Naive Assistant
+![Level 1 Solution](solutions/Level%201.png)
+
+### Level 2: The Security Bot
+![Level 2 Solution](solutions/Level%202.PNG)
+
+*Note: Solutions for Level 3 are not provided to encourage independent solving.*
+
+---
+
 ## 🛠️ Technical Details
 
 - **LLM Model**: Qwen2.5-1.5B-Instruct (quantized for efficiency)
